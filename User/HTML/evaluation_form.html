@@ -1,0 +1,42 @@
+<html language= "english">
+    <head>
+        
+    </head>
+    <body>
+        <h1>Evaluation Form</h1>
+        <br>
+        <br>
+        <form action="submit_review.php" method="get">
+            <b>ID of Assignment you are grading:</b></br>
+            <?php 
+                session_start();
+                $assignmentID = $_SESSION['AssignmentID'];
+                echo $assignmentID;
+            ?>
+            
+            <br><br>
+            <!-- this is dropdown for the reveiewer to evaluate the spelling/grammer of the material-->
+            <b>Spelling/Grammar:</b></br>
+            <input type="radio" name="spell" value="Poor" checked> Poor<br>
+            <input type="radio" name="spell" value="Good"> Good<br>
+            <input type="radio" name="spell" value="Outstanding"> Outstanding<br>
+            <input type="radio" name="spell" value="other"> Other<br>
+            <br><br>
+            <!-- this is dropdown for the reveiewer to evaluate the format of the material-->
+            <b>Format:</b></br>
+            <input type="radio" name="format" value="Poor" checked> Poor<br>
+            <input type="radio" name="format" value="Good"> Good<br>
+            <input type="radio" name="format" value="Outstanding"> Outstanding<br>
+            <input type="radio" name="format" value="other"> Other<br>
+            <br><br>
+            <!-- this is a textbox for the reviewer to enter any comments on the material-->
+            <b>Comments:</b></br>
+            <input type="text" name= "comments">
+            <br><br>
+            <!-- this is a textbox for the reviewer to enter an overall grade for the material-->
+            <b>Overall rating:</b></br>
+            <input type="text" name= "rating"> <p> % </p>
+            <input type="submit" value="Submit Review"/>
+        </form>
+    </body>
+</html>

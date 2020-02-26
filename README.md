@@ -1,6 +1,6 @@
 # PeerEvaluation
 
-MSCI342 Course Project
+MSCI342:Principles of Software Engineering Course Project
 
 This is  a web application that facilitates a peer evaluation process, and it serves as a platform where professors (Client) are able to create a class list, allow their students (User) to upload their assignments and assign review tasks accordingly.
 
